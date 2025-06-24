@@ -1,0 +1,243 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #1e202b;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.navbar {
+    background-color: #1e202b;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-left: 3rem;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-text h1{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.logo-text small{
+    font-size: 10px;
+    font-weight: 300;
+} 
+
+.site-title {
+    color: #fff;
+    margin-bottom: 2px;
+    font-size: 1.2rem;
+}
+
+.site-description {
+    color: #ccc;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    padding: 5px 25px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #00baff;
+    border-color: #00baff;
+}
+
+.search-section {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    background: url("../img/banner.png") no-repeat center center/cover;
+    padding-bottom: 150px;
+    position: relative;
+    z-index: 1;
+}
+
+#locationInput {
+    background-color: #1f1f30;
+    border: none;
+    color: #fff;
+    padding: 12px;
+    border-radius: 30px;
+}
+
+#findBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: calc(100% - 10px);
+    padding: 0 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #00baff;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.forecast-table {
+    position: relative;
+    z-index: 2;
+    margin-top: -120px;
+}
+
+.forecast-table .card {
+    background-color: #323544;
+    border: none;
+    color: #fff;
+    transition: transform 0.3s ease;
+    height: 23rem;
+    border-radius: 0 !important;
+}
+
+.forecast-table .head {
+    background-color: #2d303d;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+}
+
+.forecast-table .row .col-md-4:nth-child(2) .card {
+    background-color: #222530;
+}
+
+.forecast-table .row .col-md-4:nth-child(2) .head {
+    background-color: #1e1f26;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.forecast-table .row .col-md-4:nth-child(3) .head {
+    border-top-left-radius: 0;
+    border-top-right-radius: 10px;
+}
+
+.forecast-table .body {
+    padding: 20px;
+}
+
+.forecast-table .body p{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.forecast-table .body small{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.forecast-table .body .iconnn{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.row>* {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+footer {
+    background-color: #262936;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+footer input[type="text"] {
+    background-color: #1e202b;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+#subscribeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: calc(100% - 10px);
+    padding: 0 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #00baff;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer .icons a {
+    color: #00baff;
+    display: inline-block;
+    text-align: center;
+    line-height: 3;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1e202b;
+    transition: 0.4s ease;
+}
+
+footer a:hover {
+    color: white;
+    background-color: #00baff;
+}
+
+footer .copy {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 85px;
+    font-weight: 700;
+}
+
+@media (max-width:1024px) {
+    .forecast-table .card {
+        height: 70vh;
+    }
+}
+
+@media (max-width:768px) {
+    .forecast-table .card {
+        height: 75vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+    }
+}
