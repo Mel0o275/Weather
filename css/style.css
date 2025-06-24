@@ -227,6 +227,19 @@ h1 {
     .forecast-table .card {
         height: 70vh;
     }
+
+    .logo {
+        padding: 0;
+        margin: 0;
+    }
+
+    .input-wrapper {
+        width: 75% !important;
+    }
+
+    footer .input-wrapper {
+        width: 100% !important;
+    }
 }
 
 @media (max-width:768px) {
