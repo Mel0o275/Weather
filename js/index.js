@@ -5,12 +5,12 @@ async function search(cityName) {
     if (cityName === '') return;
 
     try {
-        const result = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=6fce1ca337974ae791b154336252306&q=${cityName}&days=3`);
+        const result = await fetch(`https://corsproxy.io/?https://api.weatherapi.com/v1/forecast.json?key=6fce1ca337974ae791b154336252306&q=${cityName}&days=3`);
         const finalResult = await result.json();
         console.log(finalResult);
         display(finalResult.location, finalResult.current);
         nextDays(finalResult.forecast.forecastday.slice(1));
-        } catch (error) {
+    } catch (error) {
         console.error('Error:', error);
     }
 }
@@ -74,10 +74,10 @@ function nextDays(forecastDays) {
                     <span>${dayName}</span>
                 </div>
                 <div class="body text-center">
-                <img src="https:${day.day.condition.icon}" alt="Weather Icon">
-                <p class="fs-5 mb-0 p-0">${day.day.avgtemp_c}&deg;C</p>
-                <small>${day.day.avgtemp_f}&deg;F</small>
-                <p class="text-info mt-5 iconnn">${day.day.condition.text}</p>
+                    <img src="https:${day.day.condition.icon}" alt="Weather Icon">
+                    <p class="fs-5 mb-0 p-0">${day.day.avgtemp_c}&deg;C</p>
+                    <small>${day.day.avgtemp_f}&deg;F</small>
+                    <p class="text-info mt-5 iconnn">${day.day.condition.text}</p>
                 </div>
             </div>
         </div>
@@ -99,6 +99,6 @@ if (navigator.geolocation) {
         },
         () => search('Cairo')
     );
-}else{
+} else {
     search('Cairo');
 }
