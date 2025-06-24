@@ -223,6 +223,12 @@ h1 {
     font-weight: 700;
 }
 
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
 @media (max-width:1024px) {
     .forecast-table .card {
         height: 70vh;
