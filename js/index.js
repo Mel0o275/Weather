@@ -5,7 +5,7 @@ async function search(cityName) {
     if (cityName === '') return;
 
     try {
-        const result = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=6fce1ca337974ae791b154336252306&q=${cityName}&days=3`);
+        const result = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=6fce1ca337974ae791b154336252306&q=${cityName}&days=3`);
         const finalResult = await result.json();
         console.log(finalResult);
         display(finalResult.location, finalResult.current);
